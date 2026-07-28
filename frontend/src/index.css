@@ -1,0 +1,25 @@
+
+
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #F7F5F1;
+  --color-charcoal: #1A1A1A;
+  --color-gold: #B8925A;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+.input-field {
+  width: 100%;
+  border-bottom: 1px solid rgb(26 26 26 / 0.2);
+  background: transparent;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--color-gold);
+}
