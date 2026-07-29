@@ -5,8 +5,8 @@ export async function listAdmins() {
   return res.data;
 }
 
-export async function createAdmin(username, password) {
-  const res = await api.post("/api/auth/admins", { username, password });
+export async function createAdmin(username, email, password) {
+  const res = await api.post("/api/auth/admins", { username, email, password });
   return res.data;
 }
 

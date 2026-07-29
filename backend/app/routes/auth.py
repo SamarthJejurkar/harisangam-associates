@@ -35,12 +35,17 @@ async def create_admin(payload: AdminCreate, owner: dict = Depends(require_owner
     if existing:
         raise HTTPException(status_code=400, detail="Username already exists")
 
+    existing_email = await db.admins.find_one({"email": payload.email})
+    if existing_email:
+        raise HTTPException(status_code=400, detail="Email already in use")
+
     result = await db.admins.insert_one({
         "username": payload.username,
+        "email": payload.email,
         "password_hash": hash_password(payload.password),
         "role": "admin",
     })
-    return {"id": str(result.inserted_id), "username": payload.username, "role": "admin"}
+    return {"id": str(result.inserted_id), "username": payload.username, "email": payload.email, "role": "admin"}
 
 @router.delete("/admins/{admin_id}")
 async def delete_admin(admin_id: str, owner: dict = Depends(require_owner)):

@@ -1,12 +1,14 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, EmailStr
 from typing import Literal
 
 class AdminBase(BaseModel):
     username: str
+    email: EmailStr
     role: Literal["owner", "admin"] = "admin"
 
 class AdminCreate(BaseModel):
     username: str
+    email: EmailStr
     password: str
 
 class AdminOut(AdminBase):

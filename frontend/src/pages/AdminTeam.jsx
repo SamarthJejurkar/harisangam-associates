@@ -5,6 +5,7 @@ import { listAdmins, createAdmin, deleteAdmin } from "../api/admins";
 export default function AdminTeam() {
   const [admins, setAdmins] = useState([]);
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
@@ -21,8 +22,9 @@ export default function AdminTeam() {
     e.preventDefault();
     setError("");
     try {
-      await createAdmin(username, password);
+      await createAdmin(username, email, password);
       setUsername("");
+      setEmail("");
       setPassword("");
       loadAdmins();
     } catch (err) {
@@ -53,6 +55,7 @@ export default function AdminTeam() {
                   <span className="ml-3 text-xs tracking-[0.1em] text-charcoal/40">
                     {a.role.toUpperCase()}
                   </span>
+                  <p className="text-xs text-charcoal/40 mt-0.5">{a.email}</p>
                 </div>
                 {a.role !== "owner" && (
                   <button
@@ -74,14 +77,21 @@ export default function AdminTeam() {
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full border-b border-charcoal/20 bg-transparent py-2 text-sm outline-none focus:border-gold transition-colors"
+            className="input-field"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="input-field"
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full border-b border-charcoal/20 bg-transparent py-2 text-sm outline-none focus:border-gold transition-colors"
+            className="input-field"
           />
           {error && <p className="text-xs text-red-600">{error}</p>}
           <button
