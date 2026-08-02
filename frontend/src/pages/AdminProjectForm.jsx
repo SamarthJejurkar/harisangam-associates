@@ -11,6 +11,7 @@ const emptyProject = {
   year: "",
   area: "",
   typology: "",
+  architect_name: "",
   concept: "",
   cover_image: "",
   gallery: [],
@@ -191,6 +192,15 @@ export default function AdminProjectForm() {
               placeholder="e.g. Single-family residence"
               value={form.typology}
               onChange={(e) => updateField("typology", e.target.value)}
+              className="input-field"
+            />
+          </Field>
+           <Field label="Architect Name">
+            <input
+              type="text"
+              placeholder="e.g. Rohan Harisangam"
+              value={form.architect_name || ""}
+              onChange={(e) => updateField("architect_name", e.target.value)}
               className="input-field"
             />
           </Field>

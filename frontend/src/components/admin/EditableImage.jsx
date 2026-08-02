@@ -33,7 +33,7 @@ export default function EditableImage({ src, alt, onSave, className = "" }) {
   }
 
   return (
-    <div className="relative group/image">
+    <div className="relative group/image w-full h-full">
       <img src={src} alt={alt} className={className} />
 
       <div

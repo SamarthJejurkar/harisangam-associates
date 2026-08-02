@@ -26,8 +26,8 @@ export default function ProjectsPage() {
       .finally(() => setLoading(false));
   }, [activeCategory]);
 
-  return (
-    <section className="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-20">
+ return (
+    <section className="max-w-[1900px] mx-auto px-4 md:pl-24 md:pr-16 pt-10 md:pt-16 pb-12 md:pb-20">
       <span className="text-xs tracking-[0.2em] text-gold">PROJECTS</span>
       <h1 className="font-serif text-4xl md:text-5xl mt-4 text-charcoal">Selected Work</h1>
 
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
       </div>
 
       {!loading && (
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.id}
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="font-serif text-lg mt-4 text-charcoal">{project.title}</h3>
+                <h3 className="font-serif font-semibold text-lg mt-4 text-charcoal">{project.title}</h3>
                 <p className="text-xs tracking-[0.1em] text-charcoal/50 mt-1">
                   {project.location.toUpperCase()}, {project.year}
                 </p>

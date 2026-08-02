@@ -13,6 +13,10 @@ import OwnerRoute from "./components/shared/OwnerRoute";
 import AdminProjects from "./pages/AdminProjects";
 import AdminProjectForm from "./pages/AdminProjectForm";
 import AdminEnquiries from "./pages/AdminEnquiries";
+import GalleryPage from "./pages/GalleryPage";
+import AdminGallery from "./pages/AdminGallery";
+import AboutPage from "./pages/AboutPage";
+import AdminAbout from "./pages/AdminAbout";
 
 function PublicLayout({ children }) {
   return (
@@ -32,6 +36,8 @@ function App() {
           <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
           <Route path="/projects" element={<PublicLayout><ProjectsPage /></PublicLayout>} />
           <Route path="/projects/:id" element={<PublicLayout><ProjectDetail /></PublicLayout>} />
+          <Route path="/gallery" element={<PublicLayout><GalleryPage /></PublicLayout>} />
+          <Route path="/about" element={<PublicLayout><AboutPage /></PublicLayout>} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route
@@ -82,6 +88,22 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/admin/gallery"
+            element={
+              <ProtectedRoute>
+                <AdminGallery />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+  path="/admin/about"
+  element={
+    <ProtectedRoute>
+      <AdminAbout />
+    </ProtectedRoute>
+  }
+/>
         </Routes>
       </BrowserRouter>
     </AuthProvider>

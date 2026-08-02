@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import db
 from app.core.startup import ensure_owner_exists
-from app.routes import sections, projects, auth ,enquiries
+from app.routes import sections, projects, auth ,enquiries, gallery
 from app.core.config import settings
 
 app = FastAPI(title="Harsangam & Associates API")
@@ -23,6 +23,7 @@ app.include_router(sections.router)
 app.include_router(projects.router)
 app.include_router(auth.router)
 app.include_router(enquiries.router)
+app.include_router(gallery.router)
 
 @app.get("/")
 async def root():

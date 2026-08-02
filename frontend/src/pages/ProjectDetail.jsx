@@ -33,7 +33,7 @@ export default function ProjectDetail() {
       <div className="grid md:grid-cols-2 gap-12 mt-8">
         <div>
           <span className="text-xs tracking-[0.2em] text-gold">{project.category.toUpperCase()}</span>
-          <h1 className="font-serif text-4xl md:text-5xl mt-3 text-charcoal">{project.title}</h1>
+          <h1 className="font-serif font-semibold text-4xl md:text-5xl mt-3 text-charcoal">{project.title}</h1>
 
           <div className="grid grid-cols-3 gap-4 mt-8 text-xs tracking-[0.1em] text-charcoal/60">
             <div>
@@ -52,6 +52,12 @@ export default function ProjectDetail() {
 
           <p className="text-xs tracking-[0.1em] text-charcoal/40 mt-6 mb-1">TYPOLOGY</p>
           <p className="text-sm text-charcoal/70">{project.typology}</p>
+            {project.architect_name && (
+            <>
+              <p className="text-xs tracking-[0.1em] text-charcoal/40 mt-6 mb-1">ARCHITECT</p>
+              <p className="text-sm text-charcoal/70">{project.architect_name}</p>
+            </>
+          )}
 
           <p className="mt-8 text-sm text-charcoal/60 leading-relaxed">{project.concept}</p>
         </div>
