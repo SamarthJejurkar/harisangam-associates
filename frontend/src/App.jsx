@@ -17,10 +17,21 @@ import GalleryPage from "./pages/GalleryPage";
 import AdminGallery from "./pages/AdminGallery";
 import AboutPage from "./pages/AboutPage";
 import AdminAbout from "./pages/AdminAbout";
+import ScrollToHash from "./components/shared/ScrollToHash";
 
+// function PublicLayout({ children }) {
+//   return (
+//     <div className="bg-cream min-h-screen">
+//       <Navbar />
+//       {children}
+//       <Footer />
+//     </div>
+//   );
+// }
 function PublicLayout({ children }) {
   return (
     <div className="bg-cream min-h-screen">
+      <ScrollToHash />
       <Navbar />
       {children}
       <Footer />
