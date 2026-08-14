@@ -114,6 +114,20 @@ sections_seed = {
         "signature": "— HARSANGAM & ASSOCIATES",
         "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200",
     },
+    "associates": {
+        "eyebrow": "OUR ASSOCIATES",
+        "heading": "A network built to deliver every stage of a project.",
+        "categories": [
+            {"label": "Design", "associates": [{"name": "Mohit Harisangam Architects", "logo": ""}]},
+            {"label": "Landscape", "associates": [{"name": "Mansi Harisangam Architects", "logo": ""}]},
+            {"label": "Real Estate", "associates": [
+                {"name": "Nirmiti Spaces", "logo": ""},
+                {"name": "Nirmiti Construction", "logo": ""},
+                {"name": "Nircon Developers", "logo": ""},
+            ]},
+            {"label": "Events", "associates": [{"name": "Nirmiti Lawns", "logo": ""}]},
+        ],
+    },
     "about_firm": {
         "eyebrow": "ABOUT",
         "heading": "Across every scale, one vision.",

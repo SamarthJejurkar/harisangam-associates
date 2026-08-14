@@ -62,6 +62,9 @@ export default function AdminShell({ children, pageTitle = "Admin" }) {
           <Link to="/admin/about" className="text-xs tracking-[0.15em] text-cream/50 hover:text-gold transition-colors">
   ABOUT
 </Link>
+<Link to="/admin/services" className="text-xs tracking-[0.15em] text-cream/50 hover:text-gold transition-colors">
+  SERVICES
+</Link>
           <Link to="/admin/enquiries" className="text-xs tracking-[0.15em] text-cream/50 hover:text-gold transition-colors">
             ENQUIRIES
           </Link>

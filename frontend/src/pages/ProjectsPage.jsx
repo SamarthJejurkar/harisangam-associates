@@ -56,7 +56,7 @@ export default function ProjectsPage() {
               transition={{ duration: 0.5 }}
             >
               <Link to={`/projects/${project.id}`} className="group block">
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[2/1] overflow-hidden">
                   <img
                     src={cld(project.cover_image, { width: 500 })}
                     alt={project.title}

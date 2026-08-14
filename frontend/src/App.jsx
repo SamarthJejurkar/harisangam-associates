@@ -18,6 +18,8 @@ import AdminGallery from "./pages/AdminGallery";
 import AboutPage from "./pages/AboutPage";
 import AdminAbout from "./pages/AdminAbout";
 import ScrollToHash from "./components/shared/ScrollToHash";
+import ServicesPage from "./pages/ServicesPage";
+import AdminServices from "./pages/AdminServices";
 
 // function PublicLayout({ children }) {
 //   return (
@@ -49,6 +51,7 @@ function App() {
           <Route path="/projects/:id" element={<PublicLayout><ProjectDetail /></PublicLayout>} />
           <Route path="/gallery" element={<PublicLayout><GalleryPage /></PublicLayout>} />
           <Route path="/about" element={<PublicLayout><AboutPage /></PublicLayout>} />
+          <Route path="/services" element={<PublicLayout><ServicesPage /></PublicLayout>} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route
@@ -112,6 +115,14 @@ function App() {
   element={
     <ProtectedRoute>
       <AdminAbout />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/services"
+  element={
+    <ProtectedRoute>
+      <AdminServices />
     </ProtectedRoute>
   }
 />

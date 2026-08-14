@@ -3,7 +3,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #F7F5F1;
+  /* --color-cream: #F7F5F1; */
+    --color-cream: #FFFFFF;
   --color-charcoal: #1A1A1A;
   --color-gold: #B8925A;
 
@@ -20,6 +21,11 @@
   outline: none;
 }
 
-.input-field:focus {
-  border-color: var(--color-gold);
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

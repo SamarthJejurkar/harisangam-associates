@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import AdminShell from "../components/admin/AdminShell";
 import { getProject, createProject, updateProject } from "../api/projects";
 import { uploadImageToCloudinary } from "../api/cloudinary";
+import { cld } from "../utils/cloudinaryTransform";
 
 const emptyProject = {
   title: "",
@@ -218,7 +219,7 @@ export default function AdminProjectForm() {
         {/* Cover image */}
         <Field label="Cover Image">
           {form.cover_image && (
-            <img src={form.cover_image} alt="Cover" className="w-full max-w-xs aspect-[4/3] object-cover mb-3" />
+           <img src={cld(form.cover_image, { width: 400 })} alt="Cover" className="w-full max-w-xs aspect-[2/1] object-cover mb-3" />
           )}
           <label className="inline-block text-xs tracking-[0.1em] border-b border-charcoal/30 hover:border-charcoal transition-colors pb-1 cursor-pointer">
             {uploadingCover ? "UPLOADING..." : form.cover_image ? "CHANGE COVER IMAGE" : "UPLOAD COVER IMAGE"}

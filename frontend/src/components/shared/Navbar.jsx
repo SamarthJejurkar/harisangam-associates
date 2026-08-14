@@ -1,10 +1,13 @@
+
+
 // import { useState } from "react";
 // import { Link } from "react-router-dom";
 
 // const navLinks = [
 //   { label: "PROJECTS", to: "/projects" },
-//   { label: "ABOUT", to: "/#about" },
-//   { label: "SERVICES", to: "/#services" },
+//   { label: "GALLERY", to: "/gallery" },
+//   { label: "ABOUT", to: "/about" },
+//   { label: "SERVICES", to: "/services" },
 //   { label: "CONTACT", to: "/#contact" },
 // ];
 
@@ -13,10 +16,10 @@
 
 //   return (
 //     <header className="w-full bg-cream/90 backdrop-blur-sm sticky top-0 z-50">
-//       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-6">
-//         <Link to="/" className="font-sans text-sm tracking-[0.2em] font-semibold text-charcoal">
+//       <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-5 md:py-6">
+//         <Link to="/" className="font-sans text-lg md:text-xl tracking-[0.15em] font-semibold text-charcoal">
 //           HA
-//           <span className="hidden md:inline text-xs font-normal tracking-[0.15em] text-charcoal/70 ml-2">
+//           <span className="hidden md:inline text-sm font-normal tracking-[0.12em] text-charcoal/70 ml-3">
 //             HARISANGAM & ASSOCIATES
 //           </span>
 //         </Link>
@@ -47,7 +50,7 @@
 //       </div>
 
 //       {menuOpen && (
-//         <nav className="md:hidden flex flex-col gap-1 px-6 pb-6 bg-cream border-t border-charcoal/10">
+//         <nav className="md:hidden flex flex-col gap-1 px-4 pb-6 bg-cream border-t border-charcoal/10">
 //           {navLinks.map((link) => (
 //             <Link
 //               key={link.label}
@@ -64,6 +67,7 @@
 //   );
 // }
 
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -71,7 +75,7 @@ const navLinks = [
   { label: "PROJECTS", to: "/projects" },
   { label: "GALLERY", to: "/gallery" },
   { label: "ABOUT", to: "/about" },
-  { label: "SERVICES", to: "/#services" },
+  { label: "SERVICES", to: "/services" },
   { label: "CONTACT", to: "/#contact" },
 ];
 
@@ -80,14 +84,13 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-cream/90 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-5 md:py-6">
-        <Link to="/" className="font-sans text-sm tracking-[0.2em] font-semibold text-charcoal">
-          HA
-          <span className="hidden md:inline text-xs font-normal tracking-[0.15em] text-charcoal/70 ml-2">
+      <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-5 md:py-4">
+        <Link to="/" className="flex items-center">
+          <img src="/logo.jpg" alt="Harisangam & Associates" className="h-9 md:h-11 w-auto" />
+          <span className="hidden md:inline text-sm font-bold tracking-[0.12em] text-charcoal ml-3">
             HARISANGAM & ASSOCIATES
           </span>
         </Link>
-
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
