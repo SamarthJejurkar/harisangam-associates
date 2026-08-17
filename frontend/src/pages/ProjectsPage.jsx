@@ -11,7 +11,7 @@ import Services from "../components/home/Services";
 
 
 
-const categories = ["All", "Residential", "Commercial", "Interior", "Landscape"];
+const categories = ["All", "Residential", "Commercial", "Interior", "Landscape", "Institutional"];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All");

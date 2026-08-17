@@ -19,7 +19,7 @@ const emptyProject = {
   review: { quote: "", client_name: "" },
 };
 
-const categories = ["Residential", "Commercial", "Interior", "Landscape"];
+const categories = ["Residential", "Commercial", "Interior", "Landscape", "Institutional"];
 
 export default function AdminProjectForm() {
   const { id } = useParams(); // undefined when creating new

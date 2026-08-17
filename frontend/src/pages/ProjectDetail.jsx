@@ -163,19 +163,18 @@ export default function ProjectDetail() {
         <div>
           <span className="text-xs tracking-[0.2em] text-gold">{project.category.toUpperCase()}</span>
           <h1 className="font-serif font-semibold text-3xl md:text-5xl mt-3 text-charcoal">{project.title}</h1>
-
-          <div className="grid grid-cols-3 gap-4 mt-8 text-xs tracking-[0.1em] text-charcoal/60">
+<div className="grid grid-cols-3 gap-4 mt-8">
             <div>
-              <p className="text-charcoal/40 mb-1">LOCATION</p>
-              <p>{project.location}</p>
+              <p className="text-xs tracking-[0.1em] text-charcoal/40 mb-1">LOCATION</p>
+              <p className="text-sm text-charcoal/70">{project.location}</p>
             </div>
             <div>
-              <p className="text-charcoal/40 mb-1">YEAR</p>
-              <p>{project.year}</p>
+              <p className="text-xs tracking-[0.1em] text-charcoal/40 mb-1">YEAR</p>
+              <p className="text-sm text-charcoal/70">{project.year}</p>
             </div>
             <div>
-              <p className="text-charcoal/40 mb-1">AREA</p>
-              <p>{project.area}</p>
+              <p className="text-xs tracking-[0.1em] text-charcoal/40 mb-1">AREA</p>
+              <p className="text-sm text-charcoal/70">{project.area}</p>
             </div>
           </div>
 
