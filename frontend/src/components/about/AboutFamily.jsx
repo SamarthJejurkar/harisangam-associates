@@ -65,6 +65,7 @@
 //   );
 // }
 
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useSection } from "../../hooks/useSection";
@@ -126,26 +127,26 @@ export default function AboutFamily() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="grid md:grid-cols-2 gap-8 md:gap-14 mt-12 md:mt-16 text-left group"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 mt-12 md:mt-16 text-left group w-full"
       >
-        <div className="aspect-[4/5] md:aspect-[4/3] overflow-hidden">
+        <div className="aspect-square overflow-hidden">
           {isEditing ? (
             <EditableImage
-              src={cld(data.founder.image, { width: 900 })}
+              src={cld(data.founder.image, { width: 600 })}
               alt={data.founder.name}
               className="w-full h-full object-cover"
               onSave={(url) => saveFounderField("image", url)}
             />
           ) : (
             <img
-              src={cld(data.founder.image, { width: 900 })}
+              src={cld(data.founder.image, { width: 600 })}
               alt={data.founder.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           )}
         </div>
 
-        <div className="flex flex-col justify-center">
+        <div className="col-span-1 lg:col-span-3 flex flex-col justify-center">
           <h3 className="font-serif font-semibold text-2xl md:text-3xl text-charcoal">{data.founder.name}</h3>
           <p className="text-xs tracking-[0.1em] text-gold mt-2">{data.founder.role}</p>
           <p className="text-sm md:text-base text-charcoal/60 leading-relaxed mt-5 max-w-md">
@@ -156,7 +157,6 @@ export default function AboutFamily() {
           </span>
         </div>
       </motion.button>
-
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 mt-14 md:mt-20">
         {data.members.map((member, i) => (
           <motion.button
