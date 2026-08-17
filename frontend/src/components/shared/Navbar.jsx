@@ -84,9 +84,9 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-cream/90 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-5 md:py-4">
+     <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-2 md:py-2">
         <Link to="/" className="flex items-center">
-          <img src="/logo.jpg" alt="Harisangam & Associates" className="h-9 md:h-11 w-auto" />
+          <img src="/logo.jpg" alt="Harisangam & Associates" className="h-14 md:h-20 w-auto" />
           <span className="hidden md:inline text-sm font-bold tracking-[0.12em] text-charcoal ml-3">
             HARISANGAM & ASSOCIATES
           </span>
