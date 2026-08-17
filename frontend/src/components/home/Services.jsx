@@ -145,7 +145,7 @@ export default function Services() {
                 × remove
               </button>
             )}
-            <h3 className="font-serif text-xl text-charcoal mb-2">
+            <h3 className="font-serif font-bold text-xl text-charcoal mb-2">
               <EditableText
                 as="span"
                 value={item.title}
