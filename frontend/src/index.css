@@ -8,7 +8,8 @@
   --color-charcoal: #1A1A1A;
   --color-gold: #B8925A;
 
-  --font-serif: "Cormorant Garamond", serif;
+  /* --font-serif: "Cormorant Garamond", serif; */
+   --font-serif: "Inter", sans-serif;
   --font-sans: "Inter", sans-serif;
 }
 
