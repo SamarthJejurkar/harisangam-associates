@@ -92,7 +92,7 @@ export default function Navbar() {
       <div className="max-w-[1900px] mx-auto flex items-center justify-between px-4 md:pl-24 md:pr-16 py-2 md:py-2">
         <Link to="/" className="flex items-center">
           <img src={logoSrc} alt="Harisangam & Associates" className="h-14 md:h-20 w-auto" />
-          <span className="inline text-[9px] sm:text-xs md:text-sm font-bold tracking-[0.08em] md:tracking-[0.12em] text-charcoal ml-2 md:ml-3 leading-tight">
+          <span className="inline text-[13px] sm:text-sm md:text-sm font-bold tracking-[0.08em] md:tracking-[0.12em] text-charcoal ml-2 md:ml-3 leading-tight">
             HARISANGAM & ASSOCIATES
           </span>
         </Link>
