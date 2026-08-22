@@ -20,6 +20,7 @@ import AdminAbout from "./pages/AdminAbout";
 import ScrollToHash from "./components/shared/ScrollToHash";
 import ServicesPage from "./pages/ServicesPage";
 import AdminServices from "./pages/AdminServices";
+import AdminLogoSettings from "./pages/AdminLogoSettings";
 
 // function PublicLayout({ children }) {
 //   return (
@@ -110,6 +111,14 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+  path="/admin/logo"
+  element={
+    <ProtectedRoute>
+      <AdminLogoSettings />
+    </ProtectedRoute>
+  }
+/>
           <Route
   path="/admin/about"
   element={
