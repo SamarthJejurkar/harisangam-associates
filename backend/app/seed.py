@@ -127,6 +127,9 @@ sections_seed = {
             ]},
             {"label": "Events", "associates": [{"name": "Nirmiti Lawns", "logo": ""}]},
         ],
+            "site_settings": {
+        "logo_url": "",  # empty = falls back to /logo.png static file
+    },
     },
     "about_firm": {
         "eyebrow": "ABOUT",
