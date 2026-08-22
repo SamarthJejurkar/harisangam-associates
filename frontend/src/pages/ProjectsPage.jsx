@@ -63,7 +63,8 @@ export default function ProjectsPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <h3 className="font-serif font-semibold text-lg mt-4 text-charcoal">{project.title}</h3>
+                {/* <h3 className="font-serif font-semibold text-lg mt-4 text-charcoal">{project.title}</h3> */}
+                <h3 className="font-serif font-semibold text-sm md:text-lg mt-4 text-charcoal">{project.title}</h3>
                 <p className="text-xs tracking-[0.1em] text-charcoal/50 mt-1">
                   {project.location.toUpperCase()}, {project.year}
                 </p>
