@@ -43,7 +43,7 @@ from app.routes import sections, projects, auth, enquiries, gallery
 from app.core.config import settings
 
 
-app = FastAPI(title="Harsangam & Associates API")
+app = FastAPI(title="Harisangam & Associates API")
 
 
 # CORS configuration
@@ -76,7 +76,7 @@ app.include_router(gallery.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Harsangam API is running"}
+    return {"message": "Harisangam API is running"}
 
 
 @app.get("/api/health/db")
