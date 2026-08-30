@@ -197,7 +197,7 @@ export default function AssociatesList() {
                           name={assoc.name}
                           onSave={(url) => saveAssociateField(catIndex, assocIndex, "logo", url)}
                         />
-                        <p className="font-serif font-semibold text-lg md:text-xl text-charcoal flex-1">
+                        <p className="font-serif font-semibold text-lg md:text-xl text-charcoal/70 flex-1">
                           <EditableText
                             as="span"
                             value={assoc.name}
