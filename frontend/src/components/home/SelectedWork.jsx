@@ -45,7 +45,7 @@ export default function SelectedWork() {
                   />
                 </div>
                 {/* <h3 className="font-serif font-semibold text-lg mt-4 text-charcoal">{project.title}</h3> */}
-                <h3 className="font-serif font-semibold text-sm md:text-lg mt-4 text-charcoal">{project.title}</h3>
+                <h3 className="font-serif font-semibold text-sm md:text-lg mt-4 tracking-wide text-charcoal/70">{project.title}</h3>
                 <p className="text-xs tracking-[0.1em] text-charcoal/50 mt-1">
                   {project.location.toUpperCase()}, {project.year}
                 </p>
