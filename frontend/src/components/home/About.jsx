@@ -27,7 +27,7 @@ export default function About() {
       >
         <EditableImage
           src={cld(aboutData.image, { width: 900 })}
-          alt="About Harsangam"
+          alt="About Harisangam"
           className="w-full h-full object-cover"
           onSave={(url) => editable.saveField("image", url)}
         />

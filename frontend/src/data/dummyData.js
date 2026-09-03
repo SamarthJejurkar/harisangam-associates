@@ -11,8 +11,8 @@ export const aboutData = {
   eyebrow: "ABOUT US",
   headline: "Good design is invisible.",
   headline_accent: "It's felt, not seen.",
-  body: "Harsangam & Associates is an architecture practice grounded in context, material honesty, and human experience. Every project begins with a question: how should this place feel?",
-  signature: "— HARSANGAM & ASSOCIATES",
+  body: "Harisangam & Associates is an architecture practice grounded in context, material honesty, and human experience. Every project begins with a question: how should this place feel?",
+  signature: "— HARISANGAM & ASSOCIATES",
   image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200",
 };
 
@@ -43,14 +43,14 @@ export const contactData = {
   eyebrow: "CONTACT",
   headline: "Let's build something",
   headline_accent: "together.",
-  email: "studio@harsangam.com",
+  email: "studio@harisangam.com",
   phone: "+91 98765 43210",
   address: "Pune, Maharashtra, India",
 };
 
 export const quoteData = {
   quote: "Good design is invisible. It's felt, not seen.",
-  signature: "— HARSANGAM & ASSOCIATES",
+  signature: "— HARISANGAM & ASSOCIATES",
   image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200",
 };
 
